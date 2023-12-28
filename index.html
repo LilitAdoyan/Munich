@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h6 {
+      color: #01162C;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29.6px;
+    }
+
+    p {
+      color: #3F4F62;
+    }
+
+    h6 {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 37.5px;
+      margin: 0;
+    }
+
+    header {
+      box-sizing: border-box;
+      z-index: 100;
+      background-color: #fff;
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+
+    .header-wrapper {
+      color: #01162C;
+      margin: auto;
+
+      max-width: 1220px;
+      width: 100%;
+    }
+
+    .header-inner-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 15px 0;
+    }
+
+    .header-nav {
+      display: flex;
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+    }
+
+    .nav-item {
+      margin-left: 22px;
+      margin-right: 8px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    * {
+      font-family: 'Roboto';
+    }
+
+    .nav-left-wrapper {
+      padding: 8px 0;
+      margin-left: 32px;
+      margin-right: 32px;
+      align-self: center;
+    }
+
+    .nav-right-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      margin: 0;
+      list-style: none;
+      padding: 0;
+
+    }
+
+    .nav-right-wrapper>li {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    .nav-right-wrapper>li:hover {
+      cursor: pointer;
+    }
+
+    .nav-right-wrapper>li:first-child {
+      max-width: 80px;
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #F87E7E;
+    }
+
+    .nav-right-wrapper>li:nth-child(2) {
+      max-width: 117px;
+      width: 100%;
+      border-radius: 10px;
+      background-color: #F87E7E;
+      color: #ffffff;
+    }
+
+    .nav-right-wrapper>li>a {
+      padding: 9px 20px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      align-items: center;
+      display: inline-flex;
+      text-align: center;
+
+    }
+
+    .pagehero-container {
+      display: flex;
+      justify-content: end;
+      margin-top: 88px;
+      max-width: 1220px;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+    .pagehero-text-wrapper {
+      align-self: center;
+
+    }
+
+    .pagehero-text-wrapper>p {
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 28.6px;
+      max-width: 514px;
+      width: 100%;
+      margin-bottom: 60px;
+
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 60px;
+      line-height: 74.4px;
+      margin: 0 0 8px 0;
+
+    }
+
+    .nav-item:hover {
+      cursor: pointer;
+    }
+
+    .moder-woman {
+      margin-right: -110px;
+    }
+
+    .register {
+      max-width: 160px;
+      width: 100%;
+      border-radius: 12.75px;
+      background-color: #F87E7E;
+      border: none;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30.6px;
+      color: #ffffff;
+      height: 56px;
+
+    }
+
+    .learn {
+      max-width: 160px;
+      width: 100%;
+      border-radius: 12.75px;
+      border: 1px solid #F87E7E;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30.6px;
+      color: #01162C;
+      height: 56px;
+      background: transparent;
+    }
+
+    .register:hover {
+      cursor: pointer;
+    }
+
+    .learn:hover {
+      cursor: pointer;
+    }
+
+    .content-wrapper-dark {
+      background-color: #F8F7FF;
+    }
+
+    .content-wrapper {
+      background-color: #fff;
+    }
+
+    .content-container {
+      max-width: 1220px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      padding: 100px 0;
+      justify-content: space-between;
+    }
+
+    .card {
+      display: flex;
+      background-color: #fff;
+      max-width: 575px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 42px;
+      line-height: 54.6px;
+    }
+
+    .h2-helping {
+      max-width: 510px;
+      width: 100%;
+      margin-top: 60px;
+    }
+
+    .advantages-p {
+      max-width: 475px;
+      width: 100%;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 40px;
+    }
+
+    .card>div:first-child {
+      margin-right: 27px;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+    h4{
+      font-family: Public Sans;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 31.2px;
+      margin: 0 0 20px;
+      color: #FFFFFF;
+
+    }
+
+    .button-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .text-wrapper {
+      align-self: center;
+    }
+
+    .text-wrapper>p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22.4px;
+      margin-top: 20px;
+      max-width: 312px;
+      width: 100%;
+    }
+
+    .content-wrapper-container {
+      padding: 100px 0;
+      max-width: 1220px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .h2-testimonials {
+      font-family: Public Sans;
+      font-weight: 600;
+      font-size: 42px;
+      line-height: 54.6px;
+      max-width: 575px;
+      width: 100%;
+      margin-top: 60px;
+    }
+
+    .testimonial-card {
+      display: flex;
+      background-color: #F8F7FF;
+      max-width: 567px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .testimonial-cards {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .card-text-wrapper {
+      margin-left: 30px;
+      align-self: center;
+      max-width: 303px;
+      width: 100%;
+    }
+
+    .testimonial {
+      margin-bottom: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22.4px;
+    }
+
+    .full-name {
+      margin: 0;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 29.6px;
+    }
+
+    .position {
+      margin: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 29.6px;
+    }
+
+    footer {
+      background: #01162C;
+      width: 100%;
+
+    }
+
+    .footer-content-wrapper {
+      max-width: 1220px;
+      width: 100%;
+      padding: 66px 0 85px;
+      margin: 0 auto;
+    }
+    .footer-inner-wrapper{
+      padding-top: 20px;
+      display: flex;
+      color: #FFFFFF;
+      justify-content: space-between;
+    }
+    .copyright-wrapper{
+      border-top: 1px solid #3F4F62;
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .copyright{
+      display: inline-block;
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #3F4F62;
+    }
+    .footer-nav-list{
+      list-style: none;
+      padding: 0;
+    }
+    .footer-nav-list > li > a{
+      text-decoration: unset;
+      color: #FFFFFF;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 29.6px;
+      padding-bottom: 15px;
+    }
+    .footer-nav-list > li > a{
+      padding: 0;
+    }
+    .footer-nav-list > li{
+      padding-bottom: 15px;
+    }
+    .footer-nav-list > li:last-child{
+      padding-bottom: 0;
+    }
+    .contact-wrapper{
+      margin-top: 20px;
+    }
+    .contact{
+      display: flex;
+      padding-bottom: 15px;
+      align-items: center;
+    }
+    .address{
+      max-width: 245px;
+      width: 100%;
+    }
+    .social-icons > span {
+      margin-left: 10px;
+    }
+    .social-icons > span:hover {
+cursor: pointer;    }
+    .contact>div{
+      margin-left: 10px;
+    }
+    .subscribe-title{
+      max-width: 456px;
+      width: 100%;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 37.5px;
+    }
+    .subscribe-wrapper{
+      max-width: 456px;
+      width: 100%;
+      display: flex;
+      height: 52px;
+      border-radius: 10px;
+    }
+
+.subscribe-button{
+  max-width: 124px;
+    width: 100%;
+    border-radius: 0px 10px 10px 0px;
+    display: inline-block;
+    border: none;
+    background-color: #8B7EF8;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+.subscribe-input{
+  max-width: 331px;
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+    display: inline-block;
+    border: none;
+    padding: 17px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-wrapper">
+      <div class="header-inner-wrapper">
+        <div>
+          <a href="/"><svg width="54" height="52" viewBox="0 0 54 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M42.5267 51.4817C38.3409 51.6311 34.7114 50.8522 31.7536 49.6357C28.7354 48.3948 26.3954 46.6675 24.8612 44.9836C25.8059 44.7092 26.4123 44.5163 27.3239 44.1485C30.9979 47.335 37.7466 48.7879 42.5267 48.6693V51.4817ZM28.8799 0.5C25.8334 0.5 23.3601 3.2744 23.3601 6.69189C23.3601 10.1094 25.8334 12.8838 28.8799 12.8838C31.9264 12.8838 34.3997 10.1094 34.3997 6.69189C34.3997 3.2744 31.9256 0.5 28.8799 0.5ZM28.8799 2.81969C26.9735 2.81969 25.428 4.55335 25.428 6.69189C25.428 8.83043 26.9735 10.5578 28.8799 10.5578C30.7863 10.5578 32.3261 8.83043 32.3261 6.69189C32.3261 4.55245 30.7863 2.81969 28.8799 2.81969ZM25.9504 20.2224C23.3101 23.4714 22.2927 27.9731 23.2212 32.2321C15.0385 30.0247 8.49078 20.4597 9.37979 9.92733C11.8369 11.8412 14.4272 12.9264 16.94 13.987C20.3418 15.4154 23.5991 16.7804 25.9504 20.2224ZM27.4119 39.5028C26.6174 39.8461 25.8003 40.1703 24.9662 40.4692C23.1429 37.2827 20.6915 34.6578 17.8395 32.8308C14.7881 30.8789 11.2805 29.8381 7.60015 29.9939C3.96498 30.1497 1.61931 31.8082 0.590612 34.0092C-0.0545472 35.3933 -0.170818 36.9648 0.240178 38.5173C0.62372 39.9828 1.49093 41.4167 2.82485 42.6268C6.09344 45.595 12.3916 47.297 21.6685 44.4855C27.4442 42.7391 30.6127 41.0625 35.3654 37.876C37.0328 36.7537 42.3249 33.1116 46.6496 31.9712C54.721 29.8445 55.0044 40.1776 47.7445 41.9611C43.1808 43.077 36.1494 42.2419 33.325 40.9575C32.4634 41.587 32.2187 41.7056 31.3071 42.2292C31.7795 42.4909 32.2801 42.7409 32.7969 42.9837C41.2187 46.893 47.1664 45.9392 50.5456 43.2889C51.7794 42.3288 52.6805 41.1314 53.253 39.847C53.8425 38.5309 54.0815 37.1224 53.9757 35.7692C53.7593 33.0881 52.23 30.6561 49.3788 29.5401C45.2931 27.9442 39.3954 31.9033 34.0815 35.4703C32.6362 36.4431 30.5352 37.8208 29.2618 38.5879C27.7995 37.7021 26.3098 36.2936 25.2318 33.6804C27.3998 33.8236 28.2388 33.9676 30.4795 33.5437C34.7598 32.733 39.4455 30.3825 43.0645 26.5284C46.7279 22.6372 49.3126 17.2188 49.3514 10.3286C49.357 8.85036 49.2513 7.32323 49.0122 5.73902L48.5512 2.66481L46.8055 5.09048C44.1376 8.7942 40.1738 10.777 36.3214 12.7099C33.1861 14.2814 30.1121 15.8212 27.7002 18.1844C24.9766 14.3747 21.4691 12.8965 17.8113 11.363C14.9488 10.1592 11.9855 8.9183 9.38464 6.38121L7.87792 4.90932L7.3555 7.07957C6.93885 8.82591 6.74425 10.5279 6.73294 12.1619C6.70549 17.7614 8.90662 22.4751 12.0581 26.0737C15.1596 29.6153 19.1952 32.0663 22.8861 33.1759C23.092 33.2384 23.2923 33.2946 23.4917 33.3444C24.1773 35.7429 25.6444 37.963 27.4119 39.5028ZM22.476 41.3243C20.9192 38.818 18.9126 36.7474 16.6057 35.2692C13.9484 33.5672 9.37414 31.8145 6.17176 31.9522C3.54268 32.0645 1.92454 33.0998 1.28584 34.4648C0.702044 35.7248 0.835275 36.8842 1.44733 37.9258C5.41679 44.7101 16.6671 43.1947 22.476 41.3243ZM24.694 32.2946C33.5438 33.6415 46.7901 22.3736 46.8563 10.3141C46.8563 9.91466 46.8507 9.51611 46.8337 9.11032C44.0488 11.9037 40.6583 13.6066 37.3396 15.2651C31.1424 18.371 22.782 22.293 24.694 32.2946Z"
+                fill="#8B7EF8" />
+            </svg>
+          </a>
+        </div>
+        <nav class='header-nav'>
+
+          <div class="nav-left-wrapper">
+            <a class="nav-item">About us</a>
+            <a class="nav-item">Courses</a>
+            <a class="nav-item">Contact</a>
+          </div>
+          <ul class="nav-right-wrapper">
+            <li><a><span>Login</span></a></li>
+            <li><a>Register</a></li>
+          </ul>
+      </div>
+
+      </nav>
+    </div>
+  </header>
+  <div class="pagehero-container">
+    <div class="pagehero-text-wrapper">
+      <h1>Working Together for your Better Life!</h1>
+      <p>Life coaches will guide you through a transformational journey of self-discovery, helping you identify your
+        unique gifts and talents</p>
+      <button class="register">Register</button>
+    </div>
+    <div><img src="woman_with_laptop.png" class="moder-woman" alt="moder-woman-with-laptop 1" /></div>
+  </div>
+  <div class="content-wrapper-dark">
+    <div class="content-container">
+      <div>
+        <h3>Our Advantages</h3>
+        <h2 class="h2-helping">Helping You Create A Life that Aligns with Your Values and Passions</h2>
+        <p class="advantages-p">It's important to note that life coaching is distinct from therapy or counseling. While
+          therapy often deals with past issues and emotional healing, life coaching is future-oriented and focuses on
+          helping individuals achieve their desired outcomes.</p>
+        <div class="button-container"><button class="register">Join Us</button><button class="learn">Learn More</button>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div><img src="img1.png" /></div>
+          <div class="text-wrapper">
+            <h6>One-on-One Coaching</h6>
+            <p>Our experienced coaches provide personalized one-on-one coaching to help you achieve your goals</p>
+          </div>
+        </div>
+        <div class="card">
+          <div><img src="img2.png" /></div>
+          <div class="text-wrapper">
+            <h6>Mindfulness Training</h6>
+            <p>Learn to reduce stress, improve focus, and cultivate inner peace with our mindfulness training program.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div><img src="img3.png" /></div>
+          <div class="text-wrapper">
+            <h6>Group Coaching</h6>
+            <p>Join our supportive community of like- minded individuals and receive group coaching to gain insights.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <div class="content-wrapper-container">
+      <div>
+        <h3>Our Testimonials</h3>
+        <h2 class="h2-testimonials">See What Our Clients Have Achieved and Get Inspired to Reach Your Own Goals</h2>
+      </div>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <div><img src="img4.png" /></div>
+          <div class="card-text-wrapper">
+            <div><svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M36.25 18H30V13C30 10.2422 32.2422 8 35 8H35.625C36.6641 8 37.5 7.16406 37.5 6.125V2.375C37.5 1.33594 36.6641 0.5 35.625 0.5H35C28.0938 0.5 22.5 6.09375 22.5 13V31.75C22.5 33.8203 24.1797 35.5 26.25 35.5H36.25C38.3203 35.5 40 33.8203 40 31.75V21.75C40 19.6797 38.3203 18 36.25 18ZM13.75 18H7.5V13C7.5 10.2422 9.74219 8 12.5 8H13.125C14.1641 8 15 7.16406 15 6.125V2.375C15 1.33594 14.1641 0.5 13.125 0.5H12.5C5.59375 0.5 0 6.09375 0 13V31.75C0 33.8203 1.67969 35.5 3.75 35.5H13.75C15.8203 35.5 17.5 33.8203 17.5 31.75V21.75C17.5 19.6797 15.8203 18 13.75 18Z"
+                  fill="#F87E7E" />
+              </svg>
+            </div>
+            <p class="testimonial">Coach empathetic and non-judgmental approach allowed me to open up and explore the
+              root causes of my concerns.</p>
+            <p class="full-name">Howard Woods</p>
+            <p class="position">Lead Developer</p>
+          </div>
+
+        </div>
+        <div class="testimonial-card">
+          <div><img src="img5.png" /></div>
+          <div class="card-text-wrapper">
+            <div><svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M36.25 18H30V13C30 10.2422 32.2422 8 35 8H35.625C36.6641 8 37.5 7.16406 37.5 6.125V2.375C37.5 1.33594 36.6641 0.5 35.625 0.5H35C28.0938 0.5 22.5 6.09375 22.5 13V31.75C22.5 33.8203 24.1797 35.5 26.25 35.5H36.25C38.3203 35.5 40 33.8203 40 31.75V21.75C40 19.6797 38.3203 18 36.25 18ZM13.75 18H7.5V13C7.5 10.2422 9.74219 8 12.5 8H13.125C14.1641 8 15 7.16406 15 6.125V2.375C15 1.33594 14.1641 0.5 13.125 0.5H12.5C5.59375 0.5 0 6.09375 0 13V31.75C0 33.8203 1.67969 35.5 3.75 35.5H13.75C15.8203 35.5 17.5 33.8203 17.5 31.75V21.75C17.5 19.6797 15.8203 18 13.75 18Z"
+                  fill="#F87E7E" />
+              </svg>
+            </div>
+            <p class="testimonial">I can't express how grateful I am for the life coaching journey. When I started, I
+              felt stuck in my career and unsure about my personal life.</p>
+            <p class="full-name">Lisa Guerrero</p>
+            <p class="position">Head of Marketing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content-wrapper">
+      <div class="footer-inner-wrapper">
+      <div>
+        <h4>Menu</h4>
+        <ul class="footer-nav-list">
+          <li><a href='Help Center'>Help Center</a></li>
+          <li><a href='Privacy Policy'>Privacy Policy</a></li>
+          <li><a href='FAQ'>FAQ</a></li>
+          <li><a href='Terms & Condition'>Terms & Condition</a></li>
+          <li><a href='Community'>Community</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="contact-wrapper">
+        <div class="contact"><span><svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.03906 15.082C0.761719 8.92969 0 8.28516 0 6C0 2.89453 2.49023 0.375 5.625 0.375C8.73047 0.375 11.25 2.89453 11.25 6C11.25 8.28516 10.459 8.92969 6.18164 15.082C5.91797 15.4922 5.30273 15.4922 5.03906 15.082ZM5.625 8.34375C6.91406 8.34375 7.96875 7.31836 7.96875 6C7.96875 4.71094 6.91406 3.65625 5.625 3.65625C4.30664 3.65625 3.28125 4.71094 3.28125 6C3.28125 7.31836 4.30664 8.34375 5.625 8.34375Z" fill="#8B7EF8"/>
+          </svg>
+          </span> <div class="address">Jl. Umalas 1 No.3, Kerobokan Kelod, Badung, Bali</div></div>
+        <div class="contact"><span><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.5605 10.9805C14.7949 11.0977 14.9707 11.3613 14.9707 11.6543C14.9707 11.6836 14.9707 11.7422 14.9707 11.8008L14.2676 14.8477C14.1797 15.1699 13.916 15.375 13.5938 15.375C6.06445 15.375 0 9.31055 0 1.78125C0 1.45898 0.205078 1.19531 0.527344 1.10742L3.57422 0.404297C3.63281 0.404297 3.69141 0.375 3.7207 0.375C4.01367 0.375 4.27734 0.550781 4.39453 0.814453L5.80078 4.0957C5.83008 4.18359 5.85938 4.27148 5.85938 4.35938C5.85938 4.59375 5.74219 4.79883 5.5957 4.91602L3.80859 6.38086C4.89258 8.66602 6.70898 10.4824 8.99414 11.5664L10.459 9.7793C10.5762 9.63281 10.7812 9.51562 10.9863 9.51562C11.1035 9.51562 11.1914 9.54492 11.2793 9.57422L14.5605 10.9805Z" fill="#8B7EF8"/>
+          </svg>
+          </span> <div>+62 (522) 9805084</div></div>
+        <div class="contact"><span><svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.707 3.9707C14.8242 3.88281 15 3.9707 15 4.11719V10.0938C15 10.8848 14.3555 11.5 13.5938 11.5H1.40625C0.615234 11.5 0 10.8848 0 10.0938V4.11719C0 3.9707 0.146484 3.88281 0.263672 3.9707C0.9375 4.49805 1.78711 5.14258 4.77539 7.31055C5.39062 7.75 6.44531 8.7168 7.5 8.7168C8.52539 8.7168 9.60938 7.75 10.1953 7.31055C13.1836 5.14258 14.0332 4.49805 14.707 3.9707ZM7.5 7.75C6.79688 7.7793 5.83008 6.90039 5.33203 6.54883C1.43555 3.73633 1.14258 3.47266 0.263672 2.76953C0.0878906 2.65234 0 2.44727 0 2.21289V1.65625C0 0.894531 0.615234 0.25 1.40625 0.25H13.5938C14.3555 0.25 15 0.894531 15 1.65625V2.21289C15 2.44727 14.8828 2.65234 14.707 2.76953C13.8281 3.47266 13.5352 3.73633 9.63867 6.54883C9.14062 6.90039 8.17383 7.7793 7.5 7.75Z" fill="#8B7EF8"/>
+          </svg>
+          </span> <div>support@domain.com</div></div>
+        <div class="contact"><span>Follow us</span> <div class="social-icons"><span><svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28.96" rx="14" fill="#8B7EF8"/>
+          <path d="M12.2719 22.8719V15.7157H9.875V12.8719H12.2719V10.6313C12.2719 8.19695 13.7594 6.87195 15.9313 6.87195C16.9719 6.87195 17.8656 6.95007 18.125 6.98445V9.5282H16.6188C15.4375 9.5282 15.2094 10.0907 15.2094 10.9126V12.8719H17.875L17.5094 15.7157H15.2094V22.8719" fill="white"/>
+          </svg>
+          </span><span><svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="29" rx="14" fill="#8B7EF8"/>
+            <path d="M10.0096 21.7022H7.01995V12.0747H10.0096V21.7022ZM8.51316 10.7614C7.55738 10.7614 6.78181 9.96958 6.78181 9.01359C6.78181 8.0576 7.55738 7.28186 8.51316 7.28186C9.46893 7.28186 10.2445 8.0576 10.2445 9.01359C10.2445 9.96958 9.46893 10.7614 8.51316 10.7614ZM21.1989 21.7022H18.2158V17.0156C18.2158 15.8987 18.1932 14.4663 16.6614 14.4663C15.1071 14.4663 14.8689 15.6798 14.8689 16.9351V21.7022H11.8825V12.0747H14.7498V13.388H14.7917C15.1907 12.6315 16.1658 11.8333 17.6204 11.8333C20.6454 11.8333 21.2022 13.8257 21.2022 16.4137V21.7022H21.1989Z" fill="white"/>
+            </svg>
+            </span><span><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="28" height="27.3778" rx="13.6889" fill="#8B7EF8"/>
+              <path d="M14.0016 10.0917C12.0147 10.0917 10.4121 11.6943 10.4121 13.6812C10.4121 15.668 12.0147 17.2706 14.0016 17.2706C15.9884 17.2706 17.591 15.668 17.591 13.6812C17.591 11.6943 15.9884 10.0917 14.0016 10.0917ZM14.0016 16.0147C12.7176 16.0147 11.668 14.9682 11.668 13.6812C11.668 12.3941 12.7145 11.3476 14.0016 11.3476C15.2886 11.3476 16.3352 12.3941 16.3352 13.6812C16.3352 14.9682 15.2855 16.0147 14.0016 16.0147ZM18.575 9.9449C18.575 10.4104 18.2002 10.7821 17.7378 10.7821C17.2723 10.7821 16.9006 10.4072 16.9006 9.9449C16.9006 9.48256 17.2755 9.10768 17.7378 9.10768C18.2002 9.10768 18.575 9.48256 18.575 9.9449ZM20.9524 10.7946C20.8993 9.67312 20.6431 8.6797 19.8215 7.86123C19.003 7.04275 18.0096 6.78659 16.8881 6.73035C15.7322 6.66475 12.2678 6.66475 11.1119 6.73035C9.99353 6.78346 9.00011 7.03963 8.17851 7.8581C7.35691 8.67658 7.10387 9.67 7.04764 10.7915C6.98204 11.9474 6.98204 15.4118 7.04764 16.5677C7.10075 17.6892 7.35691 18.6826 8.17851 19.5011C9.00011 20.3196 9.9904 20.5757 11.1119 20.632C12.2678 20.6976 15.7322 20.6976 16.8881 20.632C18.0096 20.5788 19.003 20.3227 19.8215 19.5011C20.64 18.6826 20.8961 17.6892 20.9524 16.5677C21.018 15.4118 21.018 11.9505 20.9524 10.7946ZM19.4591 17.8079C19.2154 18.4202 18.7437 18.8919 18.1283 19.1387C17.2067 19.5042 15.02 19.4199 14.0016 19.4199C12.9832 19.4199 10.7933 19.5011 9.87482 19.1387C9.26252 18.895 8.7908 18.4233 8.54401 17.8079C8.17851 16.8863 8.26286 14.6996 8.26286 13.6812C8.26286 12.6627 8.18163 10.4729 8.54401 9.55441C8.78768 8.94211 9.2594 8.4704 9.87482 8.2236C10.7964 7.8581 12.9832 7.94245 14.0016 7.94245C15.02 7.94245 17.2099 7.86123 18.1283 8.2236C18.7406 8.46727 19.2123 8.93899 19.4591 9.55441C19.8246 10.476 19.7403 12.6627 19.7403 13.6812C19.7403 14.6996 19.8246 16.8895 19.4591 17.8079Z" fill="white"/>
+              </svg>
+              </span></div></div>
+      </div>
+      </div>
+      <div><h4 class="subscribe-title">Join Our Newsletter Community for Regular Inspiration</h4>
+      <div class="subscribe-wrapper"><input class="subscribe-input" placeholder="Your Email Address"/><button class="subscribe-button">Subscribe</button></div>
+      </div>
+    </div>
+    <div class="copyright-wrapper">
+      <span class="copyright">&#169; Copyright<script>document.write(new Date().getFullYear())</script>, All Rights Reserved </span>
+      <span class="copyright">Powered by Uteach</span>
+    </div>
+  </div>
+  </footer>
+
+</body>
+
+</html>
